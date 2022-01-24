@@ -16,13 +16,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        //idの定義
         val search_text = findViewById<EditText>(R.id.keyword_text)
         val do_search = findViewById<Button>(R.id.do_search)
         val textview = findViewById<TextView>(R.id.extract_text)
         val title = findViewById<TextView>(R.id.title_text)
 
+
+        //ボタンを押したとき
         do_search.setOnClickListener{
+            //キーワードを受け取る
             val search:String = search_text.text.toString()
+            //wikiのURLをセット
             val wiki_url:String = "https://ja.wikipedia.org/api/rest_v1/page/summary/$search"
             wikiTask(wiki_url)
 
