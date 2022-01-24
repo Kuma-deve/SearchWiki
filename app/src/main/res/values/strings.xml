@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SearchWiki</string>
+    <string name="search_text">検索</string>
+    <string name="keyword">キーワード</string>
 </resources>
